@@ -1,0 +1,74 @@
+info:
+  contact: {}
+paths:
+  /system/login:
+    post:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"登陆成功"}'
+          schema:
+            type: string
+      summary: 用户登录
+      tags:
+      - System
+  /system/register:
+    post:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"登陆成功"}'
+          schema:
+            type: string
+      summary: 用户注册
+      tags:
+      - System
+  /system/user:
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"登陆成功"}'
+          schema:
+            type: string
+      summary: 获取用户列表
+      tags:
+      - System
+  /system/user/:id:
+    delete:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"登陆成功"}'
+          schema:
+            type: string
+      summary: 删除用户信息
+      tags:
+      - System
+    get:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"登陆成功"}'
+          schema:
+            type: string
+      summary: 获取用户列表
+      tags:
+      - System
+    put:
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"success":true,"data":{},"msg":"登陆成功"}'
+          schema:
+            type: string
+      summary: 修改用户信息
+      tags:
+      - System
+swagger: "2.0"

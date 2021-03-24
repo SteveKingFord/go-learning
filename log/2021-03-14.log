@@ -1,0 +1,16 @@
+[GIN-TEMPLATE]2021/03/14 - 15:29:52.539	[34minfo[0m	D:/KingFord/gitee.com/gin-template/core/server.go:22	server run success on 	{"address": ":8080"}
+[GIN-TEMPLATE]2021/03/14 - 15:33:56.805	[34minfo[0m	D:/KingFord/gitee.com/gin-template/core/server.go:22	server run success on 	{"address": ":8080"}
+[GIN-TEMPLATE]2021/03/14 - 15:37:22.135	[34minfo[0m	D:/KingFord/gitee.com/gin-template/core/server.go:22	server run success on 	{"address": ":8080"}
+[GIN-TEMPLATE]2021/03/14 - 15:51:43.613	[34minfo[0m	D:/KingFord/gitee.com/gin-template/core/server.go:22	server run success on 	{"address": ":8080"}
+[GIN-TEMPLATE]2021/03/14 - 15:51:54.588	[34minfo[0m	D:/KingFord/gitee.com/gin-template/core/server.go:22	server run success on 	{"address": ":8080"}
+[GIN-TEMPLATE]2021/03/14 - 15:57:27.932	[34minfo[0m	D:/KingFord/gitee.com/gin-template/core/server.go:22	server run success on 	{"address": ":8080"}
+[GIN-TEMPLATE]2021/03/14 - 16:07:49.759	[34minfo[0m	D:/KingFord/gitee.com/gin-template/core/server.go:22	server run success on 	{"address": ":8080"}
+[GIN-TEMPLATE]2021/03/14 - 16:09:57.285	[34minfo[0m	D:/KingFord/gitee.com/gin-template/core/server.go:22	server run success on 	{"address": ":8080"}
+[GIN-TEMPLATE]2021/03/14 - 16:09:57.312	[31merror[0m	D:/KingFord/gitee.com/gin-template/core/server.go:30	listen tcp :8080: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+[GIN-TEMPLATE]2021/03/14 - 16:11:23.375	[34minfo[0m	D:/KingFord/gitee.com/gin-template/initialize/gorm.go:44	register table success
+[GIN-TEMPLATE]2021/03/14 - 16:11:23.389	[34minfo[0m	D:/KingFord/gitee.com/gin-template/core/server.go:22	server run success on 	{"address": ":8080"}
+[GIN-TEMPLATE]2021/03/14 - 16:42:03.064	[34minfo[0m	D:/KingFord/gitee.com/gin-template/core/server.go:22	server run success on 	{"address": ":8080"}
+[GIN-TEMPLATE]2021/03/14 - 17:09:28.984	[34minfo[0m	D:/KingFord/gitee.com/gin-template/initialize/gorm.go:50	register table success
+[GIN-TEMPLATE]2021/03/14 - 17:09:29.020	[34minfo[0m	D:/KingFord/gitee.com/gin-template/core/server.go:22	server run success on 	{"address": ":8080"}
+[GIN-TEMPLATE]2021/03/14 - 17:18:56.422	[34minfo[0m	D:/KingFord/gitee.com/gin-template/initialize/gorm.go:50	register table success
+[GIN-TEMPLATE]2021/03/14 - 17:18:56.446	[34minfo[0m	D:/KingFord/gitee.com/gin-template/core/server.go:22	server run success on 	{"address": ":8080"}

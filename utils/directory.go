@@ -1,17 +1,17 @@
 package utils
 
 import (
-	"kingford-backend/global"
 	"go.uber.org/zap"
+	"kingford-backend/global"
 	"os"
 )
 
-//@author: [piexlmax](https://github.com/piexlmax)
-//@function: PathExists
-//@description: 文件目录是否存在
-//@param: path string
-//@return: bool, error
-
+/**
+ * @Description: 文件目录是否存在
+ * @param path
+ * @return bool
+ * @return error
+ */
 func PathExists(path string) (bool, error) {
 	_, err := os.Stat(path)
 	if err == nil {
@@ -23,12 +23,11 @@ func PathExists(path string) (bool, error) {
 	return false, err
 }
 
-//@author: [piexlmax](https://github.com/piexlmax)
-//@function: CreateDir
-//@description: 批量创建文件夹
-//@param: dirs ...string
-//@return: err error
-
+/**
+ * @Description: 批量创建文件夹
+ * @param dirs
+ * @return err
+ */
 func CreateDir(dirs ...string) (err error) {
 	for _, v := range dirs {
 		exist, err := PathExists(v)
@@ -39,7 +38,7 @@ func CreateDir(dirs ...string) (err error) {
 			global.Log.Debug("create directory" + v)
 			err = os.MkdirAll(v, os.ModePerm)
 			if err != nil {
-				global.Log.Error("create directory"+ v, zap.Any(" error:", err))
+				global.Log.Error("create directory"+v, zap.Any(" error:", err))
 			}
 		}
 	}

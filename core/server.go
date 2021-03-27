@@ -2,9 +2,9 @@ package core
 
 import (
 	"fmt"
+	"go.uber.org/zap"
 	"kingford-backend/global"
 	"kingford-backend/initialize"
-	"go.uber.org/zap"
 	"time"
 )
 
@@ -22,7 +22,7 @@ func RunWindowsServer() {
 	global.Log.Info("server run success on ", zap.String("address", address))
 
 	fmt.Printf(`
-	欢迎使用 Gin-Template
+	kingford-backend
 	默认自动化文档地址:http://127.0.0.1%s/swagger/index.html
 	默认前端文件运行地址:http://127.0.0.1:8080
 	`, address)

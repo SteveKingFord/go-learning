@@ -2,7 +2,7 @@
 
 # jwt configuration
 jwt:
-  signing-key: 'qmPlus'
+  signing-key: 'kingford'
   expires-time: 604800
   buffer-time: 86400
 
@@ -10,9 +10,9 @@ jwt:
 zap:
   level: 'info'
   format: 'console'
-  prefix: '[GIN-TEMPLATE]'
+  prefix: '[KINGFORD-BACKEND]'
   director: 'log'
-  link-name: 'latest_log'
+  link-name: 'log/latest_log'
   show-line: true
   encode-level: 'LowercaseColorLevelEncoder'
   stacktrace-key: 'stacktrace'

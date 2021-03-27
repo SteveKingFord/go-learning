@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"kingford-backend/global"
 	"kingford-backend/initialize/internal"
-	"kingford-backend/model"
+	"kingford-backend/model/migrate"
 	"os"
 
 	"go.uber.org/zap"
@@ -15,10 +15,10 @@ import (
 	"gorm.io/gorm/logger"
 )
 
-//@author: SliverHorn
-//@function: Gorm
-//@description: 初始化数据库并产生数据库全局变量
-//@return: *gorm.DB
+/**
+ * @Description: 初始化数据库并产生数据库全局变量
+ * @return *gorm.DB
+ */
 func Gorm() *gorm.DB {
 	switch global.Config.System.DbType {
 	case "PostgreSQL":
@@ -30,16 +30,12 @@ func Gorm() *gorm.DB {
 	}
 }
 
-// MysqlTables
-//@author: SliverHorn
-//@function: MysqlTables
-//@description: 注册数据库表专用
-//@param: db *gorm.DB
+/**
+ * @Description: 注册数据表，自动迁移
+ * @param db
+ */
 func MysqlTables(db *gorm.DB) {
-	err := db.AutoMigrate(
-		model.SysUser{},
-
-	)
+	err := migrate.InitMigrate(db)
 	if err != nil {
 		global.Log.Error("register table failed", zap.Any("err", err))
 		os.Exit(0)
@@ -47,10 +43,10 @@ func MysqlTables(db *gorm.DB) {
 	global.Log.Info("register table success")
 }
 
-//@author: SliverHorn
-//@function: GormMysql
-//@description: 初始化Mysql数据库
-//@return: *gorm.DB
+/**
+ * @Description: 初始化Mysql数据库
+ * @return *gorm.DB
+ */
 func GormMysql() *gorm.DB {
 	m := global.Config.Mysql
 	if m.Database == "" {
@@ -78,7 +74,10 @@ func GormMysql() *gorm.DB {
 	}
 }
 
-//@description: 初始化PostgreSQL数据库
+/**
+ * @Description: 初始化PostgreSQL数据库
+ * @return *gorm.DB
+ */
 func GormPostgreSQL() *gorm.DB {
 	m := global.Config.PostgreSQL
 	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%d %s",
@@ -99,7 +98,10 @@ func GormPostgreSQL() *gorm.DB {
 	}
 }
 
-//@description: 初始化SQLServer数据库
+/**
+ * @Description: 初始化SQLServer数据库
+ * @return *gorm.DB
+ */
 func GormSQLServer() *gorm.DB {
 	m := global.Config.SQLServer
 	// "sqlserver://gorm:LoremIpsum86@localhost:9930?database=gorm"
@@ -121,12 +123,11 @@ func GormSQLServer() *gorm.DB {
 	}
 }
 
-//@author: SliverHorn
-//@function: gormConfig
-//@description: 根据配置决定是否开启日志
-//@param: mod bool
-//@return: *gorm.Config
-
+/**
+ * @Description: 根据配置决定是否开启日志
+ * @param mod
+ * @return *gorm.Config
+ */
 func gormConfig(mod bool) *gorm.Config {
 	var config = &gorm.Config{DisableForeignKeyConstraintWhenMigrating: true}
 	switch global.Config.Mysql.LogZap {

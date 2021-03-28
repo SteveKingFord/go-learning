@@ -1,7 +1,7 @@
 package model
 
 type CollectionItem struct {
-	Model
+	BaseModel
 	CollectionId string `json:"collection_id" gorm:"not null;comment:'收藏id'"`
 	Name string `json:"name" gorm:"size:20;not null;comment:'名称'"`
 	Description string `json:"description" gorm:"size:200;comment:'描述'"`

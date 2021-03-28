@@ -6,7 +6,7 @@ import (
 )
 
 
-type Model struct {
+type BaseModel struct {
 	Id        string `gorm:"primarykey"`
 	CreatedAt time.Time
 	UpdatedAt time.Time

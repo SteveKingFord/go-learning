@@ -14,8 +14,7 @@ type CollectionRInterface interface {
 	create() (*model.Collection, error)
 }
 
-func (r *CollectionRepository) Create() (*model.Collection, error) {
-	entity := &model.Collection{Title: "GOLANG"}
-	err := global.DB.Create(&entity).Error
-	return entity, err
+func (r *CollectionRepository) Create(collection *model.Collection) (*model.Collection, error) {
+	err := global.DB.Create(collection).Error
+	return collection, err
 }

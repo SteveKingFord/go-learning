@@ -1,0 +1,2 @@
+[KINGFORD-BACKEND]2021/03/28 - 13:32:29.238	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 13:32:29.240	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}

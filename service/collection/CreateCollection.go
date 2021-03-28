@@ -2,7 +2,9 @@ package collection
 
 import (
 	"kingford-backend/dto"
+	"kingford-backend/model"
 	"kingford-backend/repository"
+	"kingford-backend/utils"
 	"net/http"
 )
 
@@ -10,9 +12,16 @@ type CreateService struct {
 	Title string `json:"title" form:"title"`
 }
 
-func(s *CreateService) Create() *dto.Response  {
+func (s *CreateService) Create() *dto.Response {
 	resp := repository.CollectionRepository{}
-	items,err :=resp.Create()
+	uuid, _ := utils.GenUUID()
+
+	var entity = &model.Collection{
+		BaseModel: model.BaseModel{Id: uuid},
+		Title:     s.Title,
+	}
+
+	items, err := resp.Create(entity)
 
 	if err != nil {
 		return &dto.Response{

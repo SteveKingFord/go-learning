@@ -1,6 +1,46 @@
+definitions:
+  collection.CreateService:
+    properties:
+      title:
+        type: string
+    type: object
+  dto.Response:
+    properties:
+      data:
+        type: object
+      error:
+        type: string
+      msg:
+        type: string
+      status:
+        type: integer
+    type: object
 info:
   contact: {}
 paths:
+  /collection:
+    post:
+      parameters:
+      - description: 创建收藏
+        in: body
+        name: menu
+        required: true
+        schema:
+          $ref: '#/definitions/collection.CreateService'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dto.Response'
+        "400":
+          description: 失败
+          schema:
+            $ref: '#/definitions/dto.Response'
+      summary: 创建收藏
+      tags:
+      - Collection
   /system/login:
     post:
       produces:

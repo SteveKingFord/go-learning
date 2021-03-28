@@ -23,6 +23,7 @@ func RegisterRouter()  *gin.Engine{
 	publicGroup := r.Group("")
 	{
 		router.RegisterSysBaseRouter(publicGroup)
+		router.RegisterCollectionSysRouter(publicGroup)
 	}
 
 	// 需要jwt授权

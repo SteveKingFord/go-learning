@@ -6,6 +6,21 @@ import (
 	"kingford-backend/initialize"
 )
 
+
+// @title Swagger kingford backend API
+// @version 1.0
+// @description This is a kingford backend  server Petstore server.
+
+// @contact.name API Support
+// @contact.email stevekingford@gmail.com
+
+// @securityDefinitions.apikey Bearer
+// @type apiKey
+// @in header
+// @name Authorization
+
+// @host localhost:8080
+// @BasePath /v1
 func main() {
 	// 初始化Viper配置文件
 	global.Viper = core.Viper()

@@ -29,3 +29,73 @@
 [KINGFORD-BACKEND]2021/03/28 - 16:57:51.005	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
 [KINGFORD-BACKEND]2021/03/28 - 16:57:53.341	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
 [KINGFORD-BACKEND]2021/03/28 - 16:57:53.342	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 20:25:47.008	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 20:25:51.345	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 20:25:51.348	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 20:26:43.964	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 20:26:47.361	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 20:26:47.363	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 20:29:36.859	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 20:29:39.361	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 20:29:39.363	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 20:31:02.748	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 20:31:25.541	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 20:31:25.542	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 20:34:03.855	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 20:34:08.223	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 20:34:08.224	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 20:35:39.074	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 20:35:41.639	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 20:35:41.640	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 20:36:17.369	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 20:36:42.350	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 20:36:42.352	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 20:37:29.099	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 20:37:33.877	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 20:37:33.879	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 20:38:26.246	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 20:38:26.247	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 20:45:13.728	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 20:45:13.730	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 20:45:16.117	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 20:45:22.721	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 20:45:22.723	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 20:49:16.205	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 20:49:18.559	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 20:49:18.560	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 20:50:30.428	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 20:50:41.008	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 20:50:41.009	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 20:52:39.846	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 20:56:59.598	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 20:56:59.599	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 21:01:18.539	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 21:01:20.891	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 21:01:20.893	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 21:44:53.033	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 21:44:56.718	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 21:44:56.719	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 21:45:40.850	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 21:45:44.424	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 21:45:44.425	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 21:45:52.210	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 21:45:55.885	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 21:45:55.886	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 21:48:37.567	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 21:48:41.199	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 21:48:41.200	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 21:54:15.354	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 21:55:05.799	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 21:55:05.801	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 22:04:46.049	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 22:04:49.336	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 22:04:49.337	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 22:07:08.117	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 22:07:11.708	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 22:07:11.709	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 22:10:06.815	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 22:10:09.407	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 22:10:09.409	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/03/28 - 22:14:06.697	[31merror[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:30	accept tcp [::]:8080: use of closed network connection
+[KINGFORD-BACKEND]2021/03/28 - 22:14:09.223	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/03/28 - 22:14:09.224	[34minfo[0m	/Users/kingford/kingford_bc/github.com/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}

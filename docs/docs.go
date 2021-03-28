@@ -18,13 +18,16 @@ var doc = `{
     "info": {
         "description": "{{.Description}}",
         "title": "{{.Title}}",
-        "contact": {},
+        "contact": {
+            "name": "API Support",
+            "email": "stevekingford@gmail.com"
+        },
         "version": "{{.Version}}"
     },
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
-        "/api/v1/collection": {
+        "/api/collection": {
             "get": {
                 "description": "获取分页列表",
                 "consumes": [
@@ -99,7 +102,126 @@ var doc = `{
                 }
             }
         },
-        "/api/v1/collection/{id}": {
+        "/api/collection-item": {
+            "get": {
+                "description": "获取分页列表",
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Collection"
+                ],
+                "summary": "分页列表",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "当前页",
+                        "name": "pageIndex",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "分页条数",
+                        "name": "pageSize",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/dto.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "失败",
+                        "schema": {
+                            "$ref": "#/definitions/dto.Response"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "description": "创建信息",
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Collection"
+                ],
+                "summary": "创建信息",
+                "parameters": [
+                    {
+                        "description": "创建信息",
+                        "name": "collection",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/collection.CreateItemService"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/dto.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "失败",
+                        "schema": {
+                            "$ref": "#/definitions/dto.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/collection-item/{id}": {
+            "put": {
+                "description": "通过id修改信息",
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Collection"
+                ],
+                "summary": "通过id修改信息",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "主键id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "修改信息",
+                        "name": "collection",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/collection.UpdateItemService"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/dto.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "失败",
+                        "schema": {
+                            "$ref": "#/definitions/dto.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/collection/{id}": {
             "get": {
                 "description": "通过id获取信息",
                 "consumes": [
@@ -112,7 +234,7 @@ var doc = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "id",
+                        "description": "主键id",
                         "name": "id",
                         "in": "path",
                         "required": true
@@ -145,7 +267,7 @@ var doc = `{
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "id",
+                        "description": "主键id",
                         "name": "id",
                         "in": "path",
                         "required": true
@@ -176,18 +298,18 @@ var doc = `{
                 }
             },
             "delete": {
-                "description": "删除通过id信息",
+                "description": "通过id删除信息",
                 "consumes": [
                     "application/x-json-stream"
                 ],
                 "tags": [
                     "Collection"
                 ],
-                "summary": "删除通过id信息",
+                "summary": "通过id删除信息",
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "id",
+                        "description": "主键id",
                         "name": "id",
                         "in": "path",
                         "required": true
@@ -321,10 +443,50 @@ var doc = `{
         }
     },
     "definitions": {
+        "collection.CreateItemService": {
+            "type": "object",
+            "properties": {
+                "collectionId": {
+                    "type": "string"
+                },
+                "cover": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "link": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
         "collection.CreateService": {
             "type": "object",
             "properties": {
                 "title": {
+                    "type": "string"
+                }
+            }
+        },
+        "collection.UpdateItemService": {
+            "type": "object",
+            "properties": {
+                "collectionId": {
+                    "type": "string"
+                },
+                "cover": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "link": {
+                    "type": "string"
+                },
+                "name": {
                     "type": "string"
                 }
             }
@@ -354,6 +516,13 @@ var doc = `{
                 }
             }
         }
+    },
+    "securityDefinitions": {
+        "Bearer": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header"
+        }
     }
 }`
 
@@ -368,12 +537,12 @@ type swaggerInfo struct {
 
 // SwaggerInfo holds exported Swagger Info so clients can modify it
 var SwaggerInfo = swaggerInfo{
-	Version:     "",
-	Host:        "",
-	BasePath:    "",
+	Version:     "1.0",
+	Host:        "localhost:8080",
+	BasePath:    "/v1",
 	Schemes:     []string{},
-	Title:       "",
-	Description: "",
+	Title:       "Swagger kingford backend API",
+	Description: "This is a kingford backend  server Petstore server.",
 }
 
 type s struct{}

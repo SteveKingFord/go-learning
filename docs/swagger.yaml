@@ -1,7 +1,34 @@
+basePath: /v1
 definitions:
+  collection.CreateItemService:
+    properties:
+      collectionId:
+        type: string
+      cover:
+        type: string
+      description:
+        type: string
+      link:
+        type: string
+      name:
+        type: string
+    type: object
   collection.CreateService:
     properties:
       title:
+        type: string
+    type: object
+  collection.UpdateItemService:
+    properties:
+      collectionId:
+        type: string
+      cover:
+        type: string
+      description:
+        type: string
+      link:
+        type: string
+      name:
         type: string
     type: object
   collection.UpdateService:
@@ -20,10 +47,16 @@ definitions:
       status:
         type: integer
     type: object
+host: localhost:8080
 info:
-  contact: {}
+  contact:
+    email: stevekingford@gmail.com
+    name: API Support
+  description: This is a kingford backend  server Petstore server.
+  title: Swagger kingford backend API
+  version: "1.0"
 paths:
-  /api/v1/collection:
+  /api/collection:
     get:
       consumes:
       - application/json
@@ -72,13 +105,91 @@ paths:
       summary: 创建信息
       tags:
       - Collection
-  /api/v1/collection/{id}:
+  /api/collection-item:
+    get:
+      consumes:
+      - application/json
+      description: 获取分页列表
+      parameters:
+      - description: 当前页
+        in: query
+        name: pageIndex
+        type: integer
+      - description: 分页条数
+        in: query
+        name: pageSize
+        type: integer
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/dto.Response'
+        "400":
+          description: 失败
+          schema:
+            $ref: '#/definitions/dto.Response'
+      summary: 分页列表
+      tags:
+      - Collection
+    post:
+      description: 创建信息
+      parameters:
+      - description: 创建信息
+        in: body
+        name: collection
+        required: true
+        schema:
+          $ref: '#/definitions/collection.CreateItemService'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 成功
+          schema:
+            $ref: '#/definitions/dto.Response'
+        "400":
+          description: 失败
+          schema:
+            $ref: '#/definitions/dto.Response'
+      summary: 创建信息
+      tags:
+      - Collection
+  /api/collection-item/{id}:
+    put:
+      consumes:
+      - application/json
+      description: 通过id修改信息
+      parameters:
+      - description: 主键id
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: 修改信息
+        in: body
+        name: collection
+        required: true
+        schema:
+          $ref: '#/definitions/collection.UpdateItemService'
+      responses:
+        "200":
+          description: 成功
+          schema:
+            $ref: '#/definitions/dto.Response'
+        "400":
+          description: 失败
+          schema:
+            $ref: '#/definitions/dto.Response'
+      summary: 通过id修改信息
+      tags:
+      - Collection
+  /api/collection/{id}:
     delete:
       consumes:
       - application/x-json-stream
-      description: 删除通过id信息
+      description: 通过id删除信息
       parameters:
-      - description: id
+      - description: 主键id
         in: path
         name: id
         required: true
@@ -92,7 +203,7 @@ paths:
           description: 失败
           schema:
             $ref: '#/definitions/dto.Response'
-      summary: 删除通过id信息
+      summary: 通过id删除信息
       tags:
       - Collection
     get:
@@ -100,7 +211,7 @@ paths:
       - application/x-json-stream
       description: 通过id获取信息
       parameters:
-      - description: id
+      - description: 主键id
         in: path
         name: id
         required: true
@@ -122,7 +233,7 @@ paths:
       - application/json
       description: 通过id修改信息
       parameters:
-      - description: id
+      - description: 主键id
         in: path
         name: id
         required: true
@@ -215,4 +326,9 @@ paths:
       summary: 修改用户信息
       tags:
       - System
+securityDefinitions:
+  Bearer:
+    in: header
+    name: Authorization
+    type: apiKey
 swagger: "2.0"

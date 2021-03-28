@@ -2,9 +2,9 @@ package collection
 
 import (
 	"kingford-backend/dto"
+	"kingford-backend/global"
 	"kingford-backend/model"
 	"kingford-backend/repository"
-	"kingford-backend/utils"
 	"net/http"
 )
 
@@ -13,15 +13,19 @@ type CreateService struct {
 }
 
 func (s *CreateService) Create() *dto.Response {
-	resp := repository.CollectionRepository{}
-	uuid, _ := utils.GenUUID()
+
+	resp := repository.CollectionRepository{
+		DB: global.DB,
+	}
+
+	//uuid := utils.GenUUID()
 
 	var entity = &model.Collection{
-		BaseModel: model.BaseModel{Id: uuid},
+		//BaseModel: model.BaseModel{Id:  utils.GenUUID()},
 		Title:     s.Title,
 	}
 
-	items, err := resp.Create(entity)
+	item, err := resp.Create(entity)
 
 	if err != nil {
 		return &dto.Response{
@@ -33,6 +37,6 @@ func (s *CreateService) Create() *dto.Response {
 
 	return &dto.Response{
 		Status: http.StatusOK,
-		Data:   items,
+		Data:   item,
 	}
 }

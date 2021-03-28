@@ -1,15 +1,10 @@
 package utils
 
-import(
-	"fmt"
+import (
 	"github.com/gofrs/uuid"
 )
 
-func GenUUID() (string,error){
-	v4, err := uuid.NewV4()
-	if err != nil {
-		fmt.Printf("Something went wrong: %s", err)
-		return "", err
-	}
-	return v4.String(), nil
+func GenUUID() string{
+	v4, _ := uuid.NewV4()
+	return v4.String()
 }

@@ -4,19 +4,58 @@
         "contact": {}
     },
     "paths": {
-        "/collection": {
+        "/api/v1/collection": {
+            "get": {
+                "description": "获取分页列表",
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Collection"
+                ],
+                "summary": "分页列表",
+                "parameters": [
+                    {
+                        "type": "integer",
+                        "description": "当前页",
+                        "name": "pageIndex",
+                        "in": "query"
+                    },
+                    {
+                        "type": "integer",
+                        "description": "分页条数",
+                        "name": "pageSize",
+                        "in": "query"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "$ref": "#/definitions/dto.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "失败",
+                        "schema": {
+                            "$ref": "#/definitions/dto.Response"
+                        }
+                    }
+                }
+            },
             "post": {
+                "description": "创建信息",
                 "produces": [
                     "application/json"
                 ],
                 "tags": [
                     "Collection"
                 ],
-                "summary": "创建收藏",
+                "summary": "创建信息",
                 "parameters": [
                     {
-                        "description": "创建收藏",
-                        "name": "menu",
+                        "description": "创建信息",
+                        "name": "collection",
                         "in": "body",
                         "required": true,
                         "schema": {
@@ -26,7 +65,117 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "OK",
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/dto.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "失败",
+                        "schema": {
+                            "$ref": "#/definitions/dto.Response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/v1/collection/{id}": {
+            "get": {
+                "description": "通过id获取信息",
+                "consumes": [
+                    "application/x-json-stream"
+                ],
+                "tags": [
+                    "Collection"
+                ],
+                "summary": "通过Id获取信息",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/dto.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "失败",
+                        "schema": {
+                            "$ref": "#/definitions/dto.Response"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "description": "通过id修改信息",
+                "consumes": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Collection"
+                ],
+                "summary": "通过id修改信息",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    },
+                    {
+                        "description": "修改信息",
+                        "name": "collection",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/collection.UpdateService"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/dto.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "失败",
+                        "schema": {
+                            "$ref": "#/definitions/dto.Response"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "删除通过id信息",
+                "consumes": [
+                    "application/x-json-stream"
+                ],
+                "tags": [
+                    "Collection"
+                ],
+                "summary": "删除通过id信息",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功",
                         "schema": {
                             "$ref": "#/definitions/dto.Response"
                         }
@@ -153,6 +302,14 @@
     },
     "definitions": {
         "collection.CreateService": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                }
+            }
+        },
+        "collection.UpdateService": {
             "type": "object",
             "properties": {
                 "title": {

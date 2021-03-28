@@ -20,14 +20,14 @@ func RegisterRouter()  *gin.Engine{
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
 	// 不需要jwt验证
-	publicGroup := r.Group("")
+	publicGroup := r.Group("/api")
 	{
 		router.RegisterSysBaseRouter(publicGroup)
-		router.RegisterCollectionSysRouter(publicGroup)
+		router.RegisterCollectionRouter(publicGroup)
 	}
 
 	// 需要jwt授权
-	privateGroup := r.Group("")
+	privateGroup := r.Group("/api")
 	{
 		router.RegisterSysUserRouter(privateGroup)
 	}

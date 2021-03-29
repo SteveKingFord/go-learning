@@ -130,7 +130,7 @@ paths:
             $ref: '#/definitions/dto.Response'
       summary: 分页列表
       tags:
-      - Collection
+      - CollectionItem
     post:
       description: 创建信息
       parameters:
@@ -153,8 +153,52 @@ paths:
             $ref: '#/definitions/dto.Response'
       summary: 创建信息
       tags:
-      - Collection
+      - CollectionItem
   /api/collection-item/{id}:
+    delete:
+      consumes:
+      - application/x-json-stream
+      description: 通过id删除信息
+      parameters:
+      - description: 主键id
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: 成功
+          schema:
+            $ref: '#/definitions/dto.Response'
+        "400":
+          description: 失败
+          schema:
+            $ref: '#/definitions/dto.Response'
+      summary: 通过id删除信息
+      tags:
+      - CollectionItem
+    get:
+      consumes:
+      - application/x-json-stream
+      description: 通过id获取信息
+      parameters:
+      - description: 主键id
+        in: path
+        name: id
+        required: true
+        type: string
+      responses:
+        "200":
+          description: 成功
+          schema:
+            $ref: '#/definitions/dto.Response'
+        "400":
+          description: 失败
+          schema:
+            $ref: '#/definitions/dto.Response'
+      summary: 通过Id获取信息
+      tags:
+      - CollectionItem
     put:
       consumes:
       - application/json
@@ -182,7 +226,7 @@ paths:
             $ref: '#/definitions/dto.Response'
       summary: 通过id修改信息
       tags:
-      - Collection
+      - CollectionItem
   /api/collection/{id}:
     delete:
       consumes:

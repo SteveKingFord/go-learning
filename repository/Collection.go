@@ -33,7 +33,7 @@ func (r *CollectionRepository) Get(id string) (*model.Collection, error) {
 }
 
 func (r *CollectionRepository) Create(collection *model.Collection) (*model.Collection, error) {
-	err := r.DB.Create(collection).Error
+	err := r.DB.Omit("CollectionItems").Create(collection).Error
 	return collection, err
 }
 

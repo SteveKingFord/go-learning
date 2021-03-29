@@ -15,7 +15,9 @@ func RegisterCollectionRouter(router *gin.RouterGroup) {
 		r.DELETE("/collection/:id", api.Delete)
 
 		r.GET("/collection-item", api.GetItemList)
+		r.GET("/collection-item/:id", api.GetItem)
 		r.POST("/collection-item", api.CreateItem)
 		r.PUT("/collection-item/:id", api.UpdateItem)
+		r.DELETE("/collection-item/:id", api.DeleteItem)
 	}
 }

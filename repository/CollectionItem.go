@@ -32,5 +32,6 @@ func (r *CollectionItemRepository) Update(id string, CollectionItem *model.Colle
 }
 
 func (r *CollectionItemRepository) Delete(id string) error {
-	return r.DB.Where("id = ?", id).Delete(id).Error
+	var CollectionItem model.CollectionItem
+	return r.DB.Where("id = ?", id).Delete(&CollectionItem).Error
 }

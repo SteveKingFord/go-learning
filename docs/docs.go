@@ -109,7 +109,7 @@ var doc = `{
                     "application/json"
                 ],
                 "tags": [
-                    "Collection"
+                    "CollectionItem"
                 ],
                 "summary": "分页列表",
                 "parameters": [
@@ -147,7 +147,7 @@ var doc = `{
                     "application/json"
                 ],
                 "tags": [
-                    "Collection"
+                    "CollectionItem"
                 ],
                 "summary": "创建信息",
                 "parameters": [
@@ -178,13 +178,46 @@ var doc = `{
             }
         },
         "/api/collection-item/{id}": {
+            "get": {
+                "description": "通过id获取信息",
+                "consumes": [
+                    "application/x-json-stream"
+                ],
+                "tags": [
+                    "CollectionItem"
+                ],
+                "summary": "通过Id获取信息",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "主键id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/dto.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "失败",
+                        "schema": {
+                            "$ref": "#/definitions/dto.Response"
+                        }
+                    }
+                }
+            },
             "put": {
                 "description": "通过id修改信息",
                 "consumes": [
                     "application/json"
                 ],
                 "tags": [
-                    "Collection"
+                    "CollectionItem"
                 ],
                 "summary": "通过id修改信息",
                 "parameters": [
@@ -203,6 +236,39 @@ var doc = `{
                         "schema": {
                             "$ref": "#/definitions/collection.UpdateItemService"
                         }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "成功",
+                        "schema": {
+                            "$ref": "#/definitions/dto.Response"
+                        }
+                    },
+                    "400": {
+                        "description": "失败",
+                        "schema": {
+                            "$ref": "#/definitions/dto.Response"
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "description": "通过id删除信息",
+                "consumes": [
+                    "application/x-json-stream"
+                ],
+                "tags": [
+                    "CollectionItem"
+                ],
+                "summary": "通过id删除信息",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "主键id",
+                        "name": "id",
+                        "in": "path",
+                        "required": true
                     }
                 ],
                 "responses": {

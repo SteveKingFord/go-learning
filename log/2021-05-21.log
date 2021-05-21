@@ -1,0 +1,4 @@
+[KINGFORD-BACKEND]2021/05/21 - 14:49:58.033	[31merror[0m	D:/KingFord/go/kingford-backend/initialize/gorm.go:65	MySQL启动异常	{"err": "Error 1045: Access denied for user 'root'@'localhost' (using password: YES)"}
+[KINGFORD-BACKEND]2021/05/21 - 14:49:58.048	[34minfo[0m	D:/KingFord/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/05/21 - 14:53:12.975	[34minfo[0m	D:/KingFord/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/05/21 - 14:53:13.001	[34minfo[0m	D:/KingFord/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}

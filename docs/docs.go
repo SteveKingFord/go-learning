@@ -109,7 +109,7 @@ var doc = `{
                     "application/json"
                 ],
                 "tags": [
-                    "CollectionItem"
+                    "CollectionCategory"
                 ],
                 "summary": "分页列表",
                 "parameters": [
@@ -147,7 +147,7 @@ var doc = `{
                     "application/json"
                 ],
                 "tags": [
-                    "CollectionItem"
+                    "CollectionCategory"
                 ],
                 "summary": "创建信息",
                 "parameters": [
@@ -157,7 +157,7 @@ var doc = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/category.CreateItemService"
+                            "$ref": "#/definitions/category.CreateService"
                         }
                     }
                 ],
@@ -184,7 +184,7 @@ var doc = `{
                     "application/x-json-stream"
                 ],
                 "tags": [
-                    "CollectionItem"
+                    "CollectionCategory"
                 ],
                 "summary": "通过Id获取信息",
                 "parameters": [
@@ -217,7 +217,7 @@ var doc = `{
                     "application/json"
                 ],
                 "tags": [
-                    "CollectionItem"
+                    "CollectionCategory"
                 ],
                 "summary": "通过id修改信息",
                 "parameters": [
@@ -234,7 +234,7 @@ var doc = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/category.UpdateItemService"
+                            "$ref": "#/definitions/category.UpdateService"
                         }
                     }
                 ],
@@ -259,7 +259,7 @@ var doc = `{
                     "application/x-json-stream"
                 ],
                 "tags": [
-                    "CollectionItem"
+                    "CollectionCategory"
                 ],
                 "summary": "通过id删除信息",
                 "parameters": [
@@ -509,41 +509,17 @@ var doc = `{
         }
     },
     "definitions": {
-        "category.CreateItemService": {
+        "category.CreateService": {
             "type": "object",
             "properties": {
-                "collectionId": {
-                    "type": "string"
-                },
-                "cover": {
-                    "type": "string"
-                },
-                "description": {
-                    "type": "string"
-                },
-                "link": {
-                    "type": "string"
-                },
                 "name": {
                     "type": "string"
                 }
             }
         },
-        "category.UpdateItemService": {
+        "category.UpdateService": {
             "type": "object",
             "properties": {
-                "collectionId": {
-                    "type": "string"
-                },
-                "cover": {
-                    "type": "string"
-                },
-                "description": {
-                    "type": "string"
-                },
-                "link": {
-                    "type": "string"
-                },
                 "name": {
                     "type": "string"
                 }
@@ -552,7 +528,7 @@ var doc = `{
         "collection.CreateService": {
             "type": "object",
             "properties": {
-                "title": {
+                "name": {
                     "type": "string"
                 }
             }
@@ -560,7 +536,7 @@ var doc = `{
         "collection.UpdateService": {
             "type": "object",
             "properties": {
-                "title": {
+                "name": {
                     "type": "string"
                 }
             }

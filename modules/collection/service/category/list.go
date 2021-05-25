@@ -2,16 +2,16 @@ package category
 
 import (
 	"kingford-backend/global"
-	repository2 "kingford-backend/modules/collection/repository"
+	 "kingford-backend/modules/collection/repository"
 )
 
-type ListItemService struct {
+type ListService struct {
 	PageIndex int `json:"pageIndex" form:"pageIndex"`
 	PageSize  int `json:"pageSize" form:"pageSize"`
 }
 
-func (s *ListItemService) GetList() *global.Response {
-	repo := repository2.CollectionItemRepository{DB: global.DB}
+func (s *ListService) GetList() *global.Response {
+	repo := repository.CollectionCategoryRepository{DB: global.DB}
 	item, err := repo.GetList(s.PageIndex, s.PageSize)
 
 	if err != nil {

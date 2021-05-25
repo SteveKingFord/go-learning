@@ -6,17 +6,14 @@ import (
 	"kingford-backend/utils"
 )
 
-type CollectionItem struct {
+type CollectionCategory struct {
 	global.BaseModel
-	CollectionId string `json:"collection_id" gorm:"not null;comment:'收藏id'"`
-	Name string `json:"name" gorm:"size:20;not null;comment:'名称'"`
-	Description string `json:"description" gorm:"size:200;comment:'描述'"`
-	Cover string `json:"cover" gorm:"comment:'封面图片'"`
-	Link string `json:"link" gorm:"comment:'跳转链接地址url'"`
+	Name string      `json:"title" gorm:"size:50;not null;unique;comment:'收藏标题'"`
+	Collections []Collection `json:"collections"`
 }
 
 
-func (m *CollectionItem) BeforeCreate(tx *gorm.DB) (err error) {
+func (m *CollectionCategory) BeforeCreate(tx *gorm.DB) (err error) {
 	m.Id = utils.GenUUID()
 	return
 }

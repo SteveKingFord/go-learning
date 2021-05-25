@@ -2,10 +2,8 @@ package api
 
 import (
 	"github.com/gin-gonic/gin"
-	"kingford-backend/modules/collection/service/category"
-	"net/http"
-
 	service "kingford-backend/modules/collection/service/collection"
+	"net/http"
 )
 
 // @Description 获取分页列表
@@ -69,7 +67,7 @@ func Create(c *gin.Context) {
 // @Failure 400 {object}  global.Response "失败"
 // @Router /api/collection/{id} [put]
 func Update(c *gin.Context) {
-	var updateService category.UpdateItemService
+	var updateService service.UpdateService
 	if err := c.ShouldBind(&updateService); err == nil {
 		id, _ := c.Params.Get("id")
 		res := updateService.Update(id)

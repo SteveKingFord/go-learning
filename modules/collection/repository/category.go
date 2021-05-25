@@ -2,36 +2,36 @@ package repository
 
 import (
 	"gorm.io/gorm"
-	model2 "kingford-backend/modules/collection/model"
+    "kingford-backend/modules/collection/model"
 	"kingford-backend/utils"
 )
 
-type CollectionItemRepository struct {
+type CollectionCategoryRepository struct {
 	DB *gorm.DB
 }
 
-func (r *CollectionItemRepository) GetList(pageIndex int, pageSize int) (CollectionItems []*model2.CollectionItem, err error) {
+func (r *CollectionCategoryRepository) GetList(pageIndex int, pageSize int) (CollectionCategories []*model.CollectionCategory, err error) {
 	limit, offset := utils.Page(pageIndex, pageSize)
-	err = r.DB.Order("name").Limit(limit).Offset(offset).Find(&CollectionItems).Error
-	return CollectionItems, err
+	err = r.DB.Preload("Collections").Order("name").Limit(limit).Offset(offset).Find(&CollectionCategories).Error
+	return CollectionCategories, err
 }
 
-func (r *CollectionItemRepository) Get(id string) (CollectionItem *model2.CollectionItem, err error) {
-	err = r.DB.Where("id = ?", id).First(&CollectionItem).Error
-	return CollectionItem, err
+func (r *CollectionCategoryRepository) Get(id string) (CollectionCategory *model.CollectionCategory, err error) {
+	err = r.DB.Where("id = ?", id).First(&CollectionCategory).Error
+	return CollectionCategory, err
 }
 
-func (r *CollectionItemRepository) Create(CollectionItem *model2.CollectionItem) (*model2.CollectionItem, error) {
-	err := r.DB.Create(CollectionItem).Error
-	return CollectionItem, err
+func (r *CollectionCategoryRepository) Create(CollectionCategory *model.CollectionCategory) (*model.CollectionCategory, error) {
+	err := r.DB.Create(CollectionCategory).Error
+	return CollectionCategory, err
 }
 
-func (r *CollectionItemRepository) Update(id string, CollectionItem *model2.CollectionItem) (*model2.CollectionItem, error) {
-	err := r.DB.Model(&model2.CollectionItem{}).Where("id=?", id).Updates(&CollectionItem).Error
-	return CollectionItem, err
+func (r *CollectionCategoryRepository) Update(id string, CollectionCategory *model.CollectionCategory) (*model.CollectionCategory, error) {
+	err := r.DB.Model(&model.CollectionCategory{}).Where("id=?", id).Updates(&CollectionCategory).Error
+	return CollectionCategory, err
 }
 
-func (r *CollectionItemRepository) Delete(id string) error {
-	var CollectionItem model2.CollectionItem
-	return r.DB.Where("id = ?", id).Delete(&CollectionItem).Error
+func (r *CollectionCategoryRepository) Delete(id string) error {
+	var CollectionCategory model.CollectionCategory
+	return r.DB.Where("id = ?", id).Delete(&CollectionCategory).Error
 }

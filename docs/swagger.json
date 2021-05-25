@@ -94,7 +94,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "CollectionItem"
+                    "CollectionCategory"
                 ],
                 "summary": "分页列表",
                 "parameters": [
@@ -132,7 +132,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "CollectionItem"
+                    "CollectionCategory"
                 ],
                 "summary": "创建信息",
                 "parameters": [
@@ -142,7 +142,7 @@
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/category.CreateItemService"
+                            "$ref": "#/definitions/category.CreateService"
                         }
                     }
                 ],
@@ -169,7 +169,7 @@
                     "application/x-json-stream"
                 ],
                 "tags": [
-                    "CollectionItem"
+                    "CollectionCategory"
                 ],
                 "summary": "通过Id获取信息",
                 "parameters": [
@@ -202,7 +202,7 @@
                     "application/json"
                 ],
                 "tags": [
-                    "CollectionItem"
+                    "CollectionCategory"
                 ],
                 "summary": "通过id修改信息",
                 "parameters": [
@@ -219,7 +219,7 @@
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/category.UpdateItemService"
+                            "$ref": "#/definitions/category.UpdateService"
                         }
                     }
                 ],
@@ -244,7 +244,7 @@
                     "application/x-json-stream"
                 ],
                 "tags": [
-                    "CollectionItem"
+                    "CollectionCategory"
                 ],
                 "summary": "通过id删除信息",
                 "parameters": [
@@ -494,41 +494,17 @@
         }
     },
     "definitions": {
-        "category.CreateItemService": {
+        "category.CreateService": {
             "type": "object",
             "properties": {
-                "collectionId": {
-                    "type": "string"
-                },
-                "cover": {
-                    "type": "string"
-                },
-                "description": {
-                    "type": "string"
-                },
-                "link": {
-                    "type": "string"
-                },
                 "name": {
                     "type": "string"
                 }
             }
         },
-        "category.UpdateItemService": {
+        "category.UpdateService": {
             "type": "object",
             "properties": {
-                "collectionId": {
-                    "type": "string"
-                },
-                "cover": {
-                    "type": "string"
-                },
-                "description": {
-                    "type": "string"
-                },
-                "link": {
-                    "type": "string"
-                },
                 "name": {
                     "type": "string"
                 }
@@ -537,7 +513,7 @@
         "collection.CreateService": {
             "type": "object",
             "properties": {
-                "title": {
+                "name": {
                     "type": "string"
                 }
             }
@@ -545,7 +521,7 @@
         "collection.UpdateService": {
             "type": "object",
             "properties": {
-                "title": {
+                "name": {
                     "type": "string"
                 }
             }

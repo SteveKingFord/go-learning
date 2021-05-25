@@ -2,19 +2,19 @@ package collection
 
 import (
 	"kingford-backend/global"
-	model2 "kingford-backend/modules/collection/model"
-	repository2 "kingford-backend/modules/collection/repository"
+	 "kingford-backend/modules/collection/model"
+ "kingford-backend/modules/collection/repository"
 )
 
 type UpdateService struct {
-	Title string `json:"title" form:"title"`
+	Name string `json:"name" form:"name"`
 }
 
 func (s *UpdateService) Update(id string) *global.Response {
-	repo := repository2.CollectionRepository{DB: global.DB}
+	repo := repository.CollectionRepository{DB: global.DB}
 
-	entity := &model2.Collection{
-		Title: s.Title,
+	entity := &model.Collection{
+		Name: s.Name,
 	}
 	item, err := repo.Update(id, entity)
 

@@ -2,14 +2,14 @@ package category
 
 import (
 	"kingford-backend/global"
-	repository2 "kingford-backend/modules/collection/repository"
+	"kingford-backend/modules/collection/repository"
 )
 
-type GetItemService struct {
+type GetService struct {
 }
 
-func (s *GetItemService) Get(id string) *global.Response {
-	repo := repository2.CollectionItemRepository{DB: global.DB}
+func (s *GetService) Get(id string) *global.Response {
+	repo := repository.CollectionCategoryRepository{DB: global.DB}
 	item, err := repo.Get(id)
 
 	if err != nil {

@@ -2,15 +2,15 @@ package category
 
 import (
 	"kingford-backend/global"
-	repository2 "kingford-backend/modules/collection/repository"
+	"kingford-backend/modules/collection/repository"
 )
 
-type DeleteItemService struct {
+type DeleteService struct {
 
 }
 
-func (s *DeleteItemService) Delete(id string) *global.Response {
-	repo := repository2.CollectionItemRepository{DB: global.DB}
+func (s *DeleteService) Delete(id string) *global.Response {
+	repo := repository.CollectionCategoryRepository{DB: global.DB}
 	err := repo.Delete(id)
 
 	if err != nil {

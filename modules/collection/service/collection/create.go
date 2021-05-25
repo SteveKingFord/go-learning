@@ -2,26 +2,26 @@ package collection
 
 import (
 	"kingford-backend/global"
-	model2 "kingford-backend/modules/collection/model"
-	repository2 "kingford-backend/modules/collection/repository"
+	"kingford-backend/modules/collection/model"
+	"kingford-backend/modules/collection/repository"
 	"net/http"
 )
 
 type CreateService struct {
-	Title string `json:"title" form:"title"`
+	Name string `json:"name" form:"name"`
 }
 
 func (s *CreateService) Create() *global.Response {
 
-	resp := repository2.CollectionRepository{
+	resp := repository.CollectionRepository{
 		DB: global.DB,
 	}
 
 	//uuid := utils.GenUUID()
 
-	var entity = &model2.Collection{
+	var entity = &model.Collection{
 		//BaseModel: model.BaseModel{Id:  utils.GenUUID()},
-		Title:     s.Title,
+		Name:     s.Name,
 	}
 
 	item, err := resp.Create(entity)

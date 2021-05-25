@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"kingford-backend/global"
 	"kingford-backend/initialize/internal"
-	"kingford-backend/model/migrate"
+	"kingford-backend/migrate"
 	"os"
 
 	"go.uber.org/zap"

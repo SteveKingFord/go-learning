@@ -1,12 +1,13 @@
 package initialize
 
 import (
-	_ "kingford-backend/docs"
-	"kingford-backend/middleware"
-	"kingford-backend/router"
 	"github.com/gin-gonic/gin"
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
+	_ "kingford-backend/docs"
+	"kingford-backend/middleware"
+	collection "kingford-backend/modules/collection/router"
+	user "kingford-backend/modules/user/router"
 )
 
 func RegisterRouter()  *gin.Engine{
@@ -22,14 +23,14 @@ func RegisterRouter()  *gin.Engine{
 	// 不需要jwt验证
 	publicGroup := r.Group("/v1/api")
 	{
-		router.RegisterSysBaseRouter(publicGroup)
-		router.RegisterCollectionRouter(publicGroup)
+		user.RegisterSysBaseRouter(publicGroup)
+		collection.RegisterCollectionRouter(publicGroup)
 	}
 
 	// 需要jwt授权
 	privateGroup := r.Group("/v1/api")
 	{
-		router.RegisterSysUserRouter(privateGroup)
+		user.RegisterSysUserRouter(privateGroup)
 	}
 
 	return r

@@ -55,13 +55,13 @@ var doc = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     },
                     "400": {
                         "description": "失败",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     }
                 }
@@ -90,19 +90,19 @@ var doc = `{
                     "200": {
                         "description": "成功",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     },
                     "400": {
                         "description": "失败",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     }
                 }
             }
         },
-        "/api/collection-item": {
+        "/api/collection-category": {
             "get": {
                 "description": "获取分页列表",
                 "consumes": [
@@ -130,13 +130,13 @@ var doc = `{
                     "200": {
                         "description": "OK",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     },
                     "400": {
                         "description": "失败",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     }
                 }
@@ -157,7 +157,7 @@ var doc = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/collection.CreateItemService"
+                            "$ref": "#/definitions/category.CreateItemService"
                         }
                     }
                 ],
@@ -165,19 +165,19 @@ var doc = `{
                     "200": {
                         "description": "成功",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     },
                     "400": {
                         "description": "失败",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     }
                 }
             }
         },
-        "/api/collection-item/{id}": {
+        "/api/collection-category/{id}": {
             "get": {
                 "description": "通过id获取信息",
                 "consumes": [
@@ -200,13 +200,13 @@ var doc = `{
                     "200": {
                         "description": "成功",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     },
                     "400": {
                         "description": "失败",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     }
                 }
@@ -234,7 +234,7 @@ var doc = `{
                         "in": "body",
                         "required": true,
                         "schema": {
-                            "$ref": "#/definitions/collection.UpdateItemService"
+                            "$ref": "#/definitions/category.UpdateItemService"
                         }
                     }
                 ],
@@ -242,13 +242,13 @@ var doc = `{
                     "200": {
                         "description": "成功",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     },
                     "400": {
                         "description": "失败",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     }
                 }
@@ -275,13 +275,13 @@ var doc = `{
                     "200": {
                         "description": "成功",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     },
                     "400": {
                         "description": "失败",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     }
                 }
@@ -310,13 +310,13 @@ var doc = `{
                     "200": {
                         "description": "成功",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     },
                     "400": {
                         "description": "失败",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     }
                 }
@@ -352,13 +352,13 @@ var doc = `{
                     "200": {
                         "description": "成功",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     },
                     "400": {
                         "description": "失败",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     }
                 }
@@ -385,13 +385,13 @@ var doc = `{
                     "200": {
                         "description": "成功",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     },
                     "400": {
                         "description": "失败",
                         "schema": {
-                            "$ref": "#/definitions/dto.Response"
+                            "$ref": "#/definitions/global.Response"
                         }
                     }
                 }
@@ -509,7 +509,27 @@ var doc = `{
         }
     },
     "definitions": {
-        "collection.CreateItemService": {
+        "category.CreateItemService": {
+            "type": "object",
+            "properties": {
+                "collectionId": {
+                    "type": "string"
+                },
+                "cover": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "link": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "category.UpdateItemService": {
             "type": "object",
             "properties": {
                 "collectionId": {
@@ -537,26 +557,6 @@ var doc = `{
                 }
             }
         },
-        "collection.UpdateItemService": {
-            "type": "object",
-            "properties": {
-                "collectionId": {
-                    "type": "string"
-                },
-                "cover": {
-                    "type": "string"
-                },
-                "description": {
-                    "type": "string"
-                },
-                "link": {
-                    "type": "string"
-                },
-                "name": {
-                    "type": "string"
-                }
-            }
-        },
         "collection.UpdateService": {
             "type": "object",
             "properties": {
@@ -565,7 +565,7 @@ var doc = `{
                 }
             }
         },
-        "dto.Response": {
+        "global.Response": {
             "type": "object",
             "properties": {
                 "data": {

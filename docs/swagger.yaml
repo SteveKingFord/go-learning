@@ -1,6 +1,19 @@
 basePath: /v1
 definitions:
-  collection.CreateItemService:
+  category.CreateItemService:
+    properties:
+      collectionId:
+        type: string
+      cover:
+        type: string
+      description:
+        type: string
+      link:
+        type: string
+      name:
+        type: string
+    type: object
+  category.UpdateItemService:
     properties:
       collectionId:
         type: string
@@ -18,25 +31,12 @@ definitions:
       title:
         type: string
     type: object
-  collection.UpdateItemService:
-    properties:
-      collectionId:
-        type: string
-      cover:
-        type: string
-      description:
-        type: string
-      link:
-        type: string
-      name:
-        type: string
-    type: object
   collection.UpdateService:
     properties:
       title:
         type: string
     type: object
-  dto.Response:
+  global.Response:
     properties:
       data:
         type: object
@@ -74,11 +74,11 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
         "400":
           description: 失败
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
       summary: 分页列表
       tags:
       - Collection
@@ -97,15 +97,15 @@ paths:
         "200":
           description: 成功
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
         "400":
           description: 失败
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
       summary: 创建信息
       tags:
       - Collection
-  /api/collection-item:
+  /api/collection-category:
     get:
       consumes:
       - application/json
@@ -123,11 +123,11 @@ paths:
         "200":
           description: OK
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
         "400":
           description: 失败
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
       summary: 分页列表
       tags:
       - CollectionItem
@@ -139,22 +139,22 @@ paths:
         name: collection
         required: true
         schema:
-          $ref: '#/definitions/collection.CreateItemService'
+          $ref: '#/definitions/category.CreateItemService'
       produces:
       - application/json
       responses:
         "200":
           description: 成功
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
         "400":
           description: 失败
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
       summary: 创建信息
       tags:
       - CollectionItem
-  /api/collection-item/{id}:
+  /api/collection-category/{id}:
     delete:
       consumes:
       - application/x-json-stream
@@ -169,11 +169,11 @@ paths:
         "200":
           description: 成功
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
         "400":
           description: 失败
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
       summary: 通过id删除信息
       tags:
       - CollectionItem
@@ -191,11 +191,11 @@ paths:
         "200":
           description: 成功
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
         "400":
           description: 失败
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
       summary: 通过Id获取信息
       tags:
       - CollectionItem
@@ -214,16 +214,16 @@ paths:
         name: collection
         required: true
         schema:
-          $ref: '#/definitions/collection.UpdateItemService'
+          $ref: '#/definitions/category.UpdateItemService'
       responses:
         "200":
           description: 成功
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
         "400":
           description: 失败
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
       summary: 通过id修改信息
       tags:
       - CollectionItem
@@ -242,11 +242,11 @@ paths:
         "200":
           description: 成功
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
         "400":
           description: 失败
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
       summary: 通过id删除信息
       tags:
       - Collection
@@ -264,11 +264,11 @@ paths:
         "200":
           description: 成功
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
         "400":
           description: 失败
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
       summary: 通过Id获取信息
       tags:
       - Collection
@@ -292,11 +292,11 @@ paths:
         "200":
           description: 成功
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
         "400":
           description: 失败
           schema:
-            $ref: '#/definitions/dto.Response'
+            $ref: '#/definitions/global.Response'
       summary: 通过id修改信息
       tags:
       - Collection

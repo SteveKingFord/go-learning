@@ -109,7 +109,7 @@ var doc = `{
                     "application/json"
                 ],
                 "tags": [
-                    "CollectionCategory"
+                    "Collection-Category"
                 ],
                 "summary": "分页列表",
                 "parameters": [
@@ -147,7 +147,7 @@ var doc = `{
                     "application/json"
                 ],
                 "tags": [
-                    "CollectionCategory"
+                    "Collection-Category"
                 ],
                 "summary": "创建信息",
                 "parameters": [
@@ -184,7 +184,7 @@ var doc = `{
                     "application/x-json-stream"
                 ],
                 "tags": [
-                    "CollectionCategory"
+                    "Collection-Category"
                 ],
                 "summary": "通过Id获取信息",
                 "parameters": [
@@ -217,7 +217,7 @@ var doc = `{
                     "application/json"
                 ],
                 "tags": [
-                    "CollectionCategory"
+                    "Collection-Category"
                 ],
                 "summary": "通过id修改信息",
                 "parameters": [
@@ -259,7 +259,7 @@ var doc = `{
                     "application/x-json-stream"
                 ],
                 "tags": [
-                    "CollectionCategory"
+                    "Collection-Category"
                 ],
                 "summary": "通过id删除信息",
                 "parameters": [
@@ -528,6 +528,18 @@ var doc = `{
         "collection.CreateService": {
             "type": "object",
             "properties": {
+                "categoryId": {
+                    "type": "string"
+                },
+                "cover": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "link": {
+                    "type": "string"
+                },
                 "name": {
                     "type": "string"
                 }

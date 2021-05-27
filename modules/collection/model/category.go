@@ -7,9 +7,9 @@ import (
 )
 
 type CollectionCategory struct {
+	Name string      `json:"name" gorm:"size:50;not null;unique;comment:'收藏标题'"`
+	Collections []*Collection `json:"collections"`
 	global.BaseModel
-	Name string      `json:"title" gorm:"size:50;not null;unique;comment:'收藏标题'"`
-	Collections []Collection `json:"collections"`
 }
 
 

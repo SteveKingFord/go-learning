@@ -8,7 +8,7 @@ import (
 
 // @Description 获取分页列表
 // @Summary 分页列表
-// @Tags CollectionCategory
+// @Tags Collection-Category
 // @Accept application/json
 // @Param pageIndex query int false "当前页"
 // @Param pageSize query int false "分页条数"
@@ -28,7 +28,7 @@ func GetItemList(c *gin.Context) {
 
 // @Description  通过id获取信息
 // @Summary  通过Id获取信息
-// @Tags CollectionCategory
+// @Tags Collection-Category
 // @Accept application/x-json-stream
 // @Param id path string true "主键id"
 // @Success 200 {object} global.Response "成功"
@@ -41,7 +41,7 @@ func GetItem(c *gin.Context) {
 }
 
 //@Description 创建信息
-// @Tags CollectionCategory
+// @Tags Collection-Category
 // @Summary 创建信息
 // @Produce  application/json
 // @Param collection body category.CreateService true "创建信息"
@@ -60,7 +60,7 @@ func CreateItem(c *gin.Context) {
 
 // @Description 通过id修改信息
 // @Summary 通过id修改信息
-// @Tags CollectionCategory
+// @Tags Collection-Category
 // @Accept application/json
 // @Param id path string true "主键id"
 // @Param collection body category.UpdateService true "修改信息"
@@ -80,7 +80,7 @@ func UpdateItem(c *gin.Context) {
 
 // @Description  通过id删除信息
 // @Summary  通过id删除信息
-// @Tags CollectionCategory
+// @Tags Collection-Category
 // @Accept application/x-json-stream
 // @Param id path string true "主键id"
 // @Success 200 {object} global.Response "成功"

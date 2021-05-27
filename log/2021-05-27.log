@@ -1,0 +1,26 @@
+[KINGFORD-BACKEND]2021/05/27 - 00:30:27.629	[34minfo[0m	D:/KingFord/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/05/27 - 00:30:27.657	[34minfo[0m	D:/KingFord/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/05/27 - 00:35:02.654	[34minfo[0m	D:/KingFord/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/05/27 - 00:35:02.672	[34minfo[0m	D:/KingFord/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/05/27 - 00:46:19.784	[34minfo[0m	D:/KingFord/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/05/27 - 00:46:19.802	[34minfo[0m	D:/KingFord/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/05/27 - 00:47:45.729	[34minfo[0m	D:/KingFord/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/05/27 - 00:47:45.748	[34minfo[0m	D:/KingFord/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/05/27 - 00:49:46.701	[34minfo[0m	D:/KingFord/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/05/27 - 00:49:46.725	[34minfo[0m	D:/KingFord/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/05/27 - 00:52:38.461	[34minfo[0m	D:/KingFord/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/05/27 - 00:52:38.480	[34minfo[0m	D:/KingFord/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/05/27 - 13:37:15.987	[31merror[0m	D:/KingFord/go/kingford-backend/initialize/gorm.go:65	MySQL启动异常	{"err": "dial tcp 127.0.0.1:3306: connectex: No connection could be made because the target machine actively refused it."}
+[KINGFORD-BACKEND]2021/05/27 - 13:37:16.033	[34minfo[0m	D:/KingFord/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/05/27 - 13:39:09.654	[34minfo[0m	D:/KingFord/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/05/27 - 13:39:09.681	[34minfo[0m	D:/KingFord/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/05/27 - 13:40:56.935	[34minfo[0m	D:/KingFord/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/05/27 - 13:40:56.956	[34minfo[0m	D:/KingFord/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/05/27 - 13:42:31.836	[34minfo[0m	D:/KingFord/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/05/27 - 13:42:31.858	[34minfo[0m	D:/KingFord/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/05/27 - 13:44:19.291	[34minfo[0m	D:/KingFord/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/05/27 - 13:44:19.326	[34minfo[0m	D:/KingFord/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/05/27 - 13:59:25.738	[34minfo[0m	D:/KingFord/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/05/27 - 13:59:25.760	[34minfo[0m	D:/KingFord/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}
+[KINGFORD-BACKEND]2021/05/27 - 13:59:31.384	[34minfo[0m	D:/KingFord/go/kingford-backend/initialize/gorm.go:43	register table success
+[KINGFORD-BACKEND]2021/05/27 - 13:59:31.403	[34minfo[0m	D:/KingFord/go/kingford-backend/core/server.go:22	server run success on 	{"address": ":8080"}

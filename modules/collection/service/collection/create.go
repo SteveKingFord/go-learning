@@ -8,7 +8,11 @@ import (
 )
 
 type CreateService struct {
+	CategoryId string `json:"categoryId"`
 	Name string `json:"name" form:"name"`
+	Cover string `json:"cover"`
+	Link string `json:"link"`
+	Description string `json:"description"`
 }
 
 func (s *CreateService) Create() *global.Response {
@@ -17,11 +21,12 @@ func (s *CreateService) Create() *global.Response {
 		DB: global.DB,
 	}
 
-	//uuid := utils.GenUUID()
-
 	var entity = &model.Collection{
-		//BaseModel: model.BaseModel{Id:  utils.GenUUID()},
+		CollectionCategoryId: s.CategoryId,
 		Name:     s.Name,
+		Cover:s.Cover,
+		Link:s.Link,
+		Description: s.Description,
 	}
 
 	item, err := resp.Create(entity)

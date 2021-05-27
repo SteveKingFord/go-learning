@@ -12,6 +12,14 @@ definitions:
     type: object
   collection.CreateService:
     properties:
+      categoryId:
+        type: string
+      cover:
+        type: string
+      description:
+        type: string
+      link:
+        type: string
       name:
         type: string
     type: object
@@ -114,7 +122,7 @@ paths:
             $ref: '#/definitions/global.Response'
       summary: 分页列表
       tags:
-      - CollectionCategory
+      - Collection-Category
     post:
       description: 创建信息
       parameters:
@@ -137,7 +145,7 @@ paths:
             $ref: '#/definitions/global.Response'
       summary: 创建信息
       tags:
-      - CollectionCategory
+      - Collection-Category
   /api/collection-category/{id}:
     delete:
       consumes:
@@ -160,7 +168,7 @@ paths:
             $ref: '#/definitions/global.Response'
       summary: 通过id删除信息
       tags:
-      - CollectionCategory
+      - Collection-Category
     get:
       consumes:
       - application/x-json-stream
@@ -182,7 +190,7 @@ paths:
             $ref: '#/definitions/global.Response'
       summary: 通过Id获取信息
       tags:
-      - CollectionCategory
+      - Collection-Category
     put:
       consumes:
       - application/json
@@ -210,7 +218,7 @@ paths:
             $ref: '#/definitions/global.Response'
       summary: 通过id修改信息
       tags:
-      - CollectionCategory
+      - Collection-Category
   /api/collection/{id}:
     delete:
       consumes:

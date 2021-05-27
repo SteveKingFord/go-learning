@@ -10,6 +10,7 @@ require (
 	github.com/gin-gonic/gin v1.6.3
 	github.com/go-openapi/spec v0.20.3 // indirect
 	github.com/gofrs/uuid v4.0.0+incompatible // indirect
+	github.com/json-iterator/go v1.1.11 // indirect
 	github.com/lestrrat-go/file-rotatelogs v2.4.0+incompatible
 	github.com/lestrrat-go/strftime v1.0.4 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect

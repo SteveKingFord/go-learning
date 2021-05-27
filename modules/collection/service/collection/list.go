@@ -2,7 +2,9 @@ package collection
 
 import (
 	"kingford-backend/global"
-	 "kingford-backend/modules/collection/repository"
+	"kingford-backend/modules/collection/dto"
+	"kingford-backend/modules/collection/repository"
+	"net/http"
 )
 
 type ListService struct {
@@ -12,18 +14,20 @@ type ListService struct {
 
 func (s *ListService) GetList() *global.Response {
 	repo := repository.CollectionRepository{DB: global.DB}
-	item, err := repo.GetList(s.PageIndex, s.PageSize)
+	data, err := repo.GetList(s.PageIndex, s.PageSize)
+	list := dto.BuildCollectionsDto(data)
 
 	if err != nil {
 		return &global.Response{
-			Status: 400,
-			Data:   item,
+			Status: http.StatusInternalServerError,
+			Data:   list,
 			Msg:    err.Error(),
 		}
 	}
+
 	return &global.Response{
-		Status: 200,
-		Data:   item,
+		Status: http.StatusOK,
+		Data:   list,
 		Msg:    "success",
 	}
 }

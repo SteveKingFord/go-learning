@@ -6,14 +6,6 @@ import (
 	"kingford-backend/utils"
 )
 
-type CollectionInterface interface {
-	GetList(pageIndex int, pageSize int) (collections []*model.Collection, err error)
-	Get(id string) (*model.Collection, error)
-	Create(collection *model.Collection) (*model.Collection, error)
-	Update(id string, collection *model.Collection) (*model.Collection, error)
-	Delete(id string) error
-}
-
 type CollectionRepository struct {
 	DB *gorm.DB
 }
